@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:id="@+id/card_layout_subject"
+    app:cardElevation="10dp">
+
+<LinearLayout
+    android:id="@+id/layout_reservation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:layout_margin="12dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_reservation_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="🏨 체크인"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_reservation_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="2021.11.20~2021.11.22"
+        android:layout_weight="1"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_placeName_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="호텔 이름"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_hotel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="신라 호텔"
+        android:layout_weight="1"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_placeAddress_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="주소"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_hotel_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="대한민국 제주특별자치도 서귀포시 중문관광로"
+        android:layout_weight="1"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

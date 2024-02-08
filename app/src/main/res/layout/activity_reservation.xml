@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReservationActivity">
+
+    <TextView
+        android:id="@+id/popupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="호텔 🏨"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_hotel_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:hint="호텔 이름"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popupTitle" />
+
+    <EditText
+        android:id="@+id/et_hotel_address"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="호텔 주소"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hotel_name" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_check_location"
+        android:background="#EAEAEA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="194dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hotel_address">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_location_on"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="247dp" />
+
+        <TextView
+            android:id="@+id/tv_check_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="숙소 위치 확인  "
+            android:textStyle="bold"
+            android:textColor="@color/theme_text_color"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="260dp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_hotel_check_date"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:hint="체크인 체크아웃 날짜를 적어주세요 \n (ex: 2021.11.20 ~ 2021.11.22)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hotel_address" />
+
+    <Button
+        android:id="@+id/btn_add_trip_note"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/theme_text_color"
+        android:text="추가"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_hotel_check_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

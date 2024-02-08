@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+// 앱키 호출을 위한 Properties 선언
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.wkimdev.mytripnote"
+        minSdk 21
+        targetSdk 33
+        versionCode 3
+        versionName "1.3"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-core:17.2.1' // 파이어베이스 코어
+    implementation 'com.google.firebase:firebase-auth:19.1.0' // 파이어베이스 인증
+    implementation 'com.firebaseui:firebase-ui-auth:4.2.1'    // 파이어베이스 인증2
+
+    implementation 'com.google.android.gms:play-services-auth:19.2.0' // Google API를 사용하기 위해 구글 플레이 서비스 SDK 추가
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar') // 유튜브 재생 설정
+    implementation files('libs/libDaumMapAndroid.jar') // 구글 플레이 서비스
+
+    implementation "com.kakao.sdk:v2-user:2.8.3" // 카카오 로그인 SDK 모듈 설정
+    implementation 'com.google.apis:google-api-services-youtube:v3-rev183-1.22.0' // 유투브 연동 설정
+    implementation 'com.google.http-client:google-http-client-android:1.30.11' // 유투브 연동 설정
+    implementation 'com.google.api-client:google-api-client-android:1.30.11' // 유투브 연동 설정
+    implementation 'com.google.api-client:google-api-client-gson:1.30.11' // 유투브 연동 설정
+    implementation 'com.google.android.libraries.places:places:2.5.0' //구글 Place SDK
+    implementation 'com.google.android.gms:play-services-maps:18.0.0' // 구글 지도 SDK
+    implementation 'com.google.firebase:firebase-database:19.2.1' // 파이어베이스 DB 연동
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0' // 글라이드 이미지 로딩
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0' // 글라이드 이미지 로딩2
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // 이미지 원모양 처리
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTripNote</string>
+    <string name="app_key">091837fd82f4f38baaf0c816f88ea922</string>
+    <string name="kakao_app_key">kakao091837fd82f4f38baaf0c816f88ea922</string>
+    <string name="weather_api_key">0ff70c708c2d05201de78f8f4dd9db82</string>
+    <string name="google_place_search_api_key">AIzaSyDIpaGecaW8GzrsFIqGeGCNFYrofnPPXrU</string>
+    <string name="GOOGLE_API_KEY">AIzaSyDIpaGecaW8GzrsFIqGeGCNFYrofnPPXrU</string>
+    <string name="WEATHER_API_KEY">0ff70c708c2d05201de78f8f4dd9db82</string>
+
+</resources>
