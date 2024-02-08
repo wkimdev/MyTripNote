@@ -192,7 +192,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (snapshot in dataSnapshot.children) {
                     val travelItem = TravelItem()
-                    travelItem.travelId = snapshot.key //travelId
+                    travelItem.travelId = snapshot.key.toString() //travelId
                     for (snapshot1 in snapshot.children) {
                         val key = snapshot1.key
                         if ("travelTitle" == key) {
@@ -345,15 +345,21 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     // 홈 여행 목록 클릭 후, 여행노트 화면으로 이동
-    override fun onClickTravelList(travelId: String) {
+    override fun onClickTravelList(travelId: String?) {
         val intent = Intent(this, TripNoteActivity::class.java)
         PreferenceManager.setString(this, "currentTravelId", travelId)
         startActivity(intent)
     }
 
+    //data 클래스를 변경한 순간 연관함수 인자값에 영향을 줌
+    /*override fun onClickTravelList(travelId: String?) {
+        TODO("Not yet implemented")
+    }*/
+
     override fun onClickYoutubeList(searchData: SearchData) {}
     override fun onClickReservationList(reservationItem: ReservationItem) {}
     override fun onClickNoteList(noteItem: NoteItem) {}
+
 
     // 날씨API를 호출해 6국가의 날씨 정보를 리턴하는 메소드
     fun initWeatherAPI(): ArrayList<Array<String?>> {

@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
                                         "\n프로필사진: ${user.kakaoAccount?.profile?.thumbnailImageUrl}")
 
                                 val intent =
-                                    Intent(this@LoginActivity, MainActivity_bakk::class.java)
+                                    Intent(this@LoginActivity, MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                                 intent.putExtra("kakaoNickName", user.kakaoAccount?.profile?.nickname)
                                 intent.putExtra(
@@ -133,7 +133,7 @@ class LoginActivity : AppCompatActivity() {
                 val personName = account.displayName
                 val personEmail = account.email
                 val personPhoto = account.photoUrl
-                val intent = Intent(this@LoginActivity, MainActivity_bakk::class.java)
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.putExtra("nickName", personName)
                 intent.putExtra("photoUrl", personPhoto.toString())
